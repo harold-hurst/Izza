@@ -1,115 +1,128 @@
-import Image from "next/image";
-import { Geist, Geist_Mono } from "next/font/google";
-
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
+import Head from "next/head";
+import Card from "../components/card";
+import OurStoryBanner from "../components/ourStoryBanner";
+import PromoBanner from "../components/promoBanner";
+import Footer from "@/components/footer";
 
 export default function Home() {
   return (
-    <div
-      className={`${geistSans.className} ${geistMono.className} font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20`}
-    >
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] font-mono font-semibold px-1 py-0.5 rounded">
-              pages/index.js
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
+    <>
+      <Head>
+        <title>Hero Section</title>
+        <meta name="description" content="Front End Development test" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+      </Head>
+
+      {/* Sticky Header */}
+      <header className="sticky top-0 z-50 w-full bg-transparent flex items-center justify-between h-20 border border-gray-200">
+        <div className="flex items-center max-w-[1500px] px-6 w-full mx-auto text-white">
+          {/* Left: Logo */}
+          <img src="/svg/izza.svg" alt="Logo" className="h-10 w-auto" />
+
+          {/* Center: Navigation */}
+          <nav className="flex-1 flex justify-center space-x-8">
+            <a
+              href="#"
+              className=" text-lg font-semibold hover:text-green-400 transition"
+            >
+              Menu
+            </a>
+            <a
+              href="#"
+              className=" text-lg font-semibold hover:text-green-400 transition"
+            >
+              Family
+            </a>
+            <a
+              href="#"
+              className=" text-lg font-semibold hover:text-green-400 transition"
+            >
+              Find Us
+            </a>
+          </nav>
+
+          {/* Right: Contact */}
+          <div className="flex items-center space-x-2">
+            <span className=" text-lg font-semibold">Contact</span>
+            {/* Phone SVG */}
+            <img
+              src="/svg/phone-solid-full.svg"
+              alt="Phone Icon"
+              className="h-5 w-auto"
             />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+          </div>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
+      </header>
+
+      <section
+        // Match negative margin to height of header
+        className="-mt-[5rem]"
+        style={{
+          backgroundImage: "url('/img/hero.jpg')",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          minHeight: "100vh",
+          display: "flex",
+          alignItems: "center",
+        }}
+      >
+        <div className="max-w-[1500px] px-6 mx-auto w-full">
+          <h2 className="max-w-sm text-white text-5xl font-extrabold">
+            There is always time for pizza...
+          </h2>
+        </div>
+      </section>
+
+      {/* Menu Section */}
+      <section
+        className="w-full pt-20 md:pt-40"
+        style={{
+          background: "rgb(107 221 226)",
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
+        }}
+      >
+        <h2 className="text-2xl font-bold mb-10">Menu</h2>
+
+        <div className="flex max-w-[1500px] px-6 w-full flex-col sm:flex-row gap-6 justify-center border">
+          {["Pizza", "Calzone", "Desert", "Drinks"].map((label) => (
+            <button key={label} className="px-8 py-2 border font-semibold">
+              {label}
+            </button>
+          ))}
+        </div>
+
+        <div className="max-w-[1500px] px-6 w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 justify-center mt-12 border">
+          <Card
+            title="Pizza"
+            description="Tomato sauce, mozzarella, hot dog, caramelised onions, red onions and french's mustard drizzle."
+            imageUrl="/img/apizzaimage.jpg"
           />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
+          <Card
+            title="Drinks"
+            description="Mozzarella, BBQ jackfruit, peppers, red onions, wettcorn and a BBQ drizzle."
+            imageUrl="/img/bpizzaimage.jpg"
+            btnText="Full article"
           />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
+          <Card
+            title="Pizza"
+            description="Tomato sauce, mozzarella, hot dog, caramelised onions, red onions and french's mustard drizzle."
+            imageUrl="/img/apizzaimage.jpg"
           />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+        </div>
+      </section>
+
+      {/* Our Story Section */}
+      <OurStoryBanner />
+
+      {/* Promotional Banner */}
+      <PromoBanner />
+
+      {/* Our Story Section */}
+      <OurStoryBanner />
+
+      <Footer />
+    </>
   );
 }
