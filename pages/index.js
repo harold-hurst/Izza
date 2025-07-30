@@ -3,56 +3,12 @@ import Card from "../components/card";
 import OurStoryBanner from "../components/ourStoryBanner";
 import PromoBanner from "../components/promoBanner";
 import Footer from "@/components/footer";
+import Header from "@/components/header";
 
 export default function Home() {
   return (
     <>
-      <Head>
-        <title>Hero Section</title>
-        <meta name="description" content="Front End Development test" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-      </Head>
-
-      {/* Sticky Header */}
-      <header className="sticky top-0 z-50 w-full bg-transparent flex items-center justify-between h-20 border border-gray-200">
-        <div className="flex items-center max-w-[1500px] px-6 w-full mx-auto text-white">
-          {/* Left: Logo */}
-          <img src="/svg/izza.svg" alt="Logo" className="h-10 w-auto" />
-
-          {/* Center: Navigation */}
-          <nav className="flex-1 flex justify-center space-x-8">
-            <a
-              href="#"
-              className=" text-lg font-semibold hover:text-green-400 transition"
-            >
-              Menu
-            </a>
-            <a
-              href="#"
-              className=" text-lg font-semibold hover:text-green-400 transition"
-            >
-              Family
-            </a>
-            <a
-              href="#"
-              className=" text-lg font-semibold hover:text-green-400 transition"
-            >
-              Find Us
-            </a>
-          </nav>
-
-          {/* Right: Contact */}
-          <div className="flex items-center space-x-2">
-            <span className=" text-lg font-semibold">Contact</span>
-            {/* Phone SVG */}
-            <img
-              src="/svg/phone-solid-full.svg"
-              alt="Phone Icon"
-              className="h-5 w-auto"
-            />
-          </div>
-        </div>
-      </header>
+      <Header />
 
       <section
         // Match negative margin to height of header
@@ -114,13 +70,19 @@ export default function Home() {
       </section>
 
       {/* Our Story Section */}
-      <OurStoryBanner />
+      <OurStoryBanner
+        socials={[
+          { label: "Twitter", linkUrl: "https://twitter.com" },
+          { label: "Instagram", linkUrl: "https://instagram.com" },
+          { label: "Facebook", linkUrl: "https://facebook.com" },
+        ]}
+      />
 
       {/* Promotional Banner */}
       <PromoBanner />
 
       {/* Our Story Section */}
-      <OurStoryBanner />
+      <OurStoryBanner socials={[{ label: "View Map", linkUrl: "#" }]} />
 
       <Footer />
     </>
