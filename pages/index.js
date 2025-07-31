@@ -1,3 +1,5 @@
+"use client";
+
 import Card from "../components/card";
 import OurStoryBanner from "../components/ourStoryBanner";
 import PromoBanner from "../components/promoBanner";

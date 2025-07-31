@@ -61,11 +61,15 @@ export default function Header() {
 
         {/* Mobile Nav Button */}
         <button
-          className="md:hidden p-4"
+          className="md:hidden p-4 cursor-pointer"
           onClick={() => setMobileNavOpen((open) => !open)}
-          aria-label="Open mobile menu"
+          aria-label={mobileNavOpen ? "Close mobile menu" : "Open mobile menu"}
         >
-          <img src="/svg/cross.svg" alt="Close" className="h-6 w-6" />
+          <img
+            src="/svg/list.svg"
+            alt="Open navigation menu"
+            className="h-10 w-10"
+          />
         </button>
       </div>
 
@@ -73,7 +77,7 @@ export default function Header() {
       {mobileNavOpen && (
         <div className="fixed inset-0 bg-black bg-opacity-90 z-50 flex flex-col items-center justify-center md:hidden">
           <button
-            className="absolute top-6 right-6 p-4"
+            className="absolute top-6 right-6 p-4 cursor-pointer"
             onClick={() => setMobileNavOpen(false)}
             aria-label="Close mobile menu"
           >
