@@ -10,18 +10,17 @@ export default function PromoBanner() {
         {/* Left column content here */}
         <div className="col-span-1 md:col-span-2 flex items-center p-6">
           <div className="inline-flex flex-col gap-6 items-start">
-            <button className="px-4 py-1 border font-semibold bg-white">
+            <a href="#" className="px-4 py-1 border font-semibold bg-white">
               Exclusive offer
-            </button>
+            </a>
             <span
-              className="text-3xl"
-              style={{ fontFamily: "'PoppinsBold', sans-serif" }}
+              className="text-3xl customBold"
             >
               Sign up to our news letter for exclusive offers for 2020
             </span>
-            <button className="px-4 py-1 border font-semibold">
+            <a href="#" className="px-4 py-1 border font-semibold">
               Read more
-            </button>
+            </a>
           </div>
         </div>
 

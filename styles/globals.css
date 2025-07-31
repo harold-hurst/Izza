@@ -18,8 +18,8 @@ body {
   font-family: "PoppinsReg", sans-serif;
 }
 
-h2, #modalCloseButton {
-  font-family: "PoppinsBold", sans-serif;
+h1, #modalCloseButton, .customBold {
+  font-family: "PoppinsBold", sans-serif !important;
 }
 
 #heroSection {

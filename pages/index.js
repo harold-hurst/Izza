@@ -16,9 +16,9 @@ export default function Home() {
         id="heroSection"
       >
         <div className="max-w-[1500px] px-6 mx-auto w-full">
-          <h2 className="max-w-sm text-white text-5xl font-extrabold">
+          <h1 className="max-w-lg text-white text-6xl">
             There is always time for pizza...
-          </h2>
+          </h1>
         </div>
       </section>
 
@@ -27,7 +27,7 @@ export default function Home() {
         className="w-full pt-16 md:pt-30 pb-12 mb-20"
         id="menuSection"
       >
-        <h2 className="text-2xl font-bold mb-8">Menu</h2>
+        <h1 className="text-2xl font-bold mb-8">Menu</h1>
 
         <div className="flex max-w-[1500px] px-6 w-full flex-col sm:flex-row gap-6 justify-center">
           {["Pizza", "Calzone", "Desert", "Drinks"].map((label) => (

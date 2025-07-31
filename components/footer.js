@@ -16,67 +16,64 @@ export default function Footer() {
         <div className="flex flex-col h-full justify-between">
           <div className="grid grid-cols-2 gap-4 mb-8">
             <div>
-              <p className="text-xs font-bold">Contact Us</p>
+              <p className="text-xs customBold">Contact Us</p>
               <hr />
-              <p className="font-bold">1234 567890</p>
+              <p className="customBold">1234 567890</p>
             </div>
             <div>
-              <p className="text-xs font-bold">Follow US</p>
+              <p className="text-xs customBold">Follow US</p>
               <hr />
-              <div className="flex space-x-4 mt-2">
-
+              <div className="flex items-stretch mt-2">
                 {/* Facebook */}
                 <a
                   href="#"
                   aria-label="Facebook"
+                  className="flex items-center"
                 >
                   <img
                     src="/svg/facebook.svg"
                     alt="Facebook"
                     width={24}
                     height={24}
-                    
                   />
                 </a>
-
                 {/* Instagram */}
                 <a
                   href="#"
                   aria-label="Instagram"
+                  className="flex items-center ml-2"
                 >
                   <img
                     src="/svg/insta.svg"
                     alt="Instagram"
                     width={24}
                     height={24}
-                    
                   />
                 </a>
-                
                 {/* Twitter */}
                 <a
                   href="#"
                   aria-label="Twitter"
+                  className="flex items-center ml-4"
                 >
                   <img
                     src="/svg/twitter.svg"
                     alt="Twitter"
                     width={24}
                     height={24}
-                    
                   />
                 </a>
                 {/* LinkedIn */}
                 <a
                   href="#"
                   aria-label="LinkedIn"
+                  className="flex items-center ml-4"
                 >
                   <img
                     src="/svg/linkedin.svg"
                     alt="LinkedIn"
                     width={24}
                     height={24}
-                    
                   />
                 </a>
               </div>

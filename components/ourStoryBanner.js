@@ -29,7 +29,7 @@ export default function OurStoryBanner({ socials }) {
                 linkUrl === "iframe" ? (
                   <button
                     key={label}
-                    className="px-4 py-1 border font-semibold"
+                    className="px-4 py-1 border font-semibold cursor-pointer"
                     onClick={() => setShowModal(true)}
                   >
                     {label}

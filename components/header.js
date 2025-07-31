@@ -26,19 +26,19 @@ export default function Header() {
         <nav className="hidden md:flex justify-center space-x-8">
           <a
             href="#"
-            className="text-lg font-semibold"
+            className="text-lg customBold"
           >
             Menu
           </a>
           <a
             href="#"
-            className="text-lg font-semibold"
+            className="text-lg customBold"
           >
             Family
           </a>
           <a
             href="#"
-            className="text-lg font-semibold"
+            className="text-lg customBold"
           >
             Find Us
           </a>
@@ -48,9 +48,9 @@ export default function Header() {
         <div className="hidden md:block">
           <a
             href="#"
-            className="flex flex-row items-center space-x-2 text-lg font-semibold"
+            className="flex flex-row items-center space-x-2 text-lg"
           >
-            <span className="text-lg font-semibold">Contact</span>
+            <span className="text-lg customBold">Contact</span>
             <img
               src="/svg/phone-solid-full.svg"
               alt="Phone Icon"
