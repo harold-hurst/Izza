@@ -13,9 +13,9 @@ export default function Card({ title, description, imageUrl, btnText }) {
           priority
         />
       </div>
-      <div className="p-4">
+      <div className="p-4 pb-8">
         <h5 className="text-xl font-bold my-6">{title}</h5>
-        <p className="mb-4">{description}</p>
+        <p className="mb-6">{description}</p>
         {btnText && (
           <a
             href="#"
