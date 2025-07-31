@@ -29,7 +29,7 @@ export default function Home() {
         className="w-full pt-16 md:pt-30 pb-12 mb-20"
         id="menuSection"
       >
-        <h1 className="text-2xl font-bold mb-8">Menu</h1>
+        <h2 className="text-2xl customBold mb-8">Menu</h2>
 
         <div className="flex max-w-[1500px] px-6 w-full flex-col sm:flex-row gap-6 justify-center">
           {["Pizza", "Calzone", "Desert", "Drinks"].map((label) => (

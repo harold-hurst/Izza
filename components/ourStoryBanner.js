@@ -15,7 +15,7 @@ export default function OurStoryBanner({ socials }) {
       <div className="max-w-[1500px] px-6 mx-auto w-full grid grid-cols-1 md:grid-cols-2 gap-12">
         {/* Left Column */}
         <div className="p-6">
-          <h2 className="text-6xl font-bold my-6">OUR STORY</h2>
+          <h2 className="text-6xl font-bold my-6 customBold">OUR STORY</h2>
           <p className="text-l mb-6">
             Welcome to our pizzeria! Our story began with a passion for
             authentic flavors and a love for bringing people together. Every
