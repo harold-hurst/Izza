@@ -81,12 +81,12 @@ export default function Footer() {
           </div>
 
           <div className="flex items-center justify-end space-x-2">
-            <span className="text-xs">Made By</span>
-            <img
+            <span className="text-xs">Made By <span className="font-bold">Harold Hurst</span></span>
+            {/* <img
               src="/img/cloudfy-logo-172x42.webp"
               alt="Cloudfy Logo"
               className="h-6 w-auto mb-0"
-            />
+            /> */}
           </div>
         </div>
       </div>
